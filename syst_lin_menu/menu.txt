@@ -1,0 +1,4 @@
+3
+Quitter
+Méthode de Gauss
+Méthode de Cholesky

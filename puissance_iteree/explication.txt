@@ -1,0 +1,20 @@
+
+1- D'abord on récupère la matrice A et le vecteur x0 depuis un fichier
+
+PUISSANCES ITEREES
+2- on cherche chaque valeur xk en normalisant chaque fois :
+yk = xk/||xk||
+xk = A*yk
+3- puis on calcule le produit scalaire de (xk|yk), cette valeur obtenue c'est lambda
+4- pour chaque lambda calculé,
+    si la différence entre lambda et lambda_prec plus petit qu'Eps
+        on obtient la plus grande valeur propre
+    sinon
+        on reprend depuis 2) et on assigne lambda à lambda_prec
+
+DEFLATION
+5- pour i=2 à 5
+    on calcule la nouvelle matrice B à partir de A, lambda et le vecteur propre
+    on applique la méthode de puissances itérées à B
+    on obtient lambda_i
+
